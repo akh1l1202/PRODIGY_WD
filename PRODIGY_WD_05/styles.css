@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #2c3e50;
+    --background-color: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #5f9ea0, #4a90e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    width: 450px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.search-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#locationInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px 0 0 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-group {
+    display: flex;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    border-radius: 0 8px 8px 0;
+}
+
+.location-btn {
+    background-color: var(--secondary-color);
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.main-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.detail-item {
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.detail-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.forecast {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-day {
+    text-align: center;
+    background: rgba(0,0,0,0.05);
+    padding: 10px;
+    border-radius: 8px;
+    width: calc(20% - 10px);
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 15px;
+}
